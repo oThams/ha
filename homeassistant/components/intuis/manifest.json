@@ -1,0 +1,12 @@
+{
+  "domain": "intuis",
+  "name": "Intuis Connect with Netatmo",
+  "codeowners": ["@netatmo"],
+  "config_flow": true,
+  "dependencies": ["application_credentials", "webhook"],
+  "documentation": "https://www.home-assistant.io/integrations/intuis",
+  "iot_class": "cloud_polling",
+  "loggers": ["pyatmo"],
+  "requirements": ["pyatmo==7.6.0"],
+  "integration_type": "hub"
+}

@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "pick_implementation": {
+        "title": "Pick Authentication Method"
+      },
+      "reauth_confirm": {
+        "title": "Reauthorize Intuis Connect",
+        "description": "The Intuis Connect with Netatmo integration needs to re-authenticate your account"
+      }
+    },
+    "abort": {
+      "already_configured": "Account is already configured",
+      "already_in_progress": "Configuration flow is already in progress",
+      "oauth_error": "Received invalid token data",
+      "missing_configuration": "The component is not configured. Please follow the documentation.",
+      "reauth_successful": "Re-authentication was successful",
+      "single_instance_allowed": "Already configured. Only a single configuration possible."
+    },
+    "create_entry": {
+      "default": "Successfully authenticated with Intuis Connect with Netatmo"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Intuis Connect Options"
+      }
+    }
+  },
+  "services": {
+    "set_schedule": {
+      "name": "Set heating schedule",
+      "description": "Sets the heating schedule for Intuis radiators.",
+      "fields": {
+        "schedule_name": {
+          "name": "Schedule name",
+          "description": "Name of the schedule to activate."
+        }
+      }
+    },
+    "set_preset_mode_with_end_datetime": {
+      "name": "Set preset mode with end time",
+      "description": "Sets a preset mode with a specified end time.",
+      "fields": {
+        "preset_mode": {
+          "name": "Preset mode",
+          "description": "Preset mode to set (Schedule, Away, Frost Guard)."
+        },
+        "end_datetime": {
+          "name": "End datetime",
+          "description": "Date and time when the preset mode should end."
+        }
+      }
+    }
+  }
+}
