@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "pick_implementation": {
+        "title": "Choisir la méthode d'authentification"
+      },
+      "reauth_confirm": {
+        "title": "Réautoriser Intuis Connect",
+        "description": "L'intégration Intuis Connect with Netatmo nécessite de réauthentifier votre compte"
+      }
+    },
+    "abort": {
+      "already_configured": "Le compte est déjà configuré",
+      "already_in_progress": "Le flux de configuration est déjà en cours",
+      "oauth_error": "Données de jeton invalides reçues",
+      "missing_configuration": "Le composant n'est pas configuré. Veuillez suivre la documentation.",
+      "reauth_successful": "La réauthentification a réussi",
+      "single_instance_allowed": "Déjà configuré. Une seule configuration possible."
+    },
+    "create_entry": {
+      "default": "Authentification réussie avec Intuis Connect with Netatmo"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options Intuis Connect"
+      }
+    }
+  },
+  "services": {
+    "set_schedule": {
+      "name": "Définir la programmation de chauffage",
+      "description": "Définit la programmation de chauffage pour les radiateurs Intuis.",
+      "fields": {
+        "schedule_name": {
+          "name": "Nom de la programmation",
+          "description": "Nom de la programmation à activer."
+        }
+      }
+    },
+    "set_preset_mode_with_end_datetime": {
+      "name": "Définir le mode prédéfini avec heure de fin",
+      "description": "Définit un mode prédéfini avec une heure de fin spécifiée.",
+      "fields": {
+        "preset_mode": {
+          "name": "Mode prédéfini",
+          "description": "Mode prédéfini à définir (Programmation, Absent, Hors-gel)."
+        },
+        "end_datetime": {
+          "name": "Date et heure de fin",
+          "description": "Date et heure auxquelles le mode prédéfini doit se terminer."
+        }
+      }
+    }
+  }
+}
