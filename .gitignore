@@ -1,134 +1,134 @@
-/config
-config2/*
-
-tests/testing_config/deps
-tests/testing_config/home-assistant.log*
-
-# hass-release
-data/
-.token
-
-# Translations
-homeassistant/components/*/translations
-
-# Hide sublime text stuff
-*.sublime-project
-*.sublime-workspace
-
-# Hide some OS X stuff
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-# Thumbnails
-._*
-
-# IntelliJ IDEA
-.idea
-*.iml
-
-# pytest
-.pytest_cache
-.cache
-
-# GITHUB Proposed Python stuff:
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
+*$py.class
 
 # C extensions
 *.so
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-.eggs
-parts
-bin
-var
-sdist
-develop-eggs
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
 .installed.cfg
-lib
-lib64
-pip-wheel-metadata
+*.egg
 
-# Logs
-*.log
-pip-log.txt
+# PyInstaller
+*.manifest
+*.spec
 
 # Unit test / coverage reports
-.coverage
-coverage.xml
-nosetests.xml
 htmlcov/
-test-reports/
-test-results.xml
-test-output.xml
-pytest-*.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
+*.pot
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+# Django stuff:
+*.log
+local_settings.py
 
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
 .python-version
 
-# emacs auto backups
-*~
-*#
-*.orig
+# celery beat schedule file
+celerybeat-schedule
 
-# venv stuff
-pyvenv.cfg
-pip-selfcheck.json
-venv
-.venv
-Pipfile*
-share/*
-/Scripts/
+# SageMath parsed files
+*.sage.py
 
-# vimmy stuff
-*.swp
-*.swo
-tags
-ctags.tmp
-
-# vagrant stuff
-virtualization/vagrant/setup_done
-virtualization/vagrant/.vagrant
-virtualization/vagrant/config
-
-# Visual Studio Code
-.vscode/*
-!.vscode/cSpell.json
-!.vscode/extensions.json
-!.vscode/tasks.json
+# Environments
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Windows Explorer
-desktop.ini
-/home-assistant.pyproj
-/home-assistant.sln
-/.vs/*
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
 
 # mypy
-/.mypy_cache/*
-/.dmypy.json
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
-# Secrets
-.lokalise_token
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.iml
 
-# monkeytype
-monkeytype.sqlite3
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+desktop.ini
+Icon
 
-# This is left behind by Azure Restore Cache
-tmp_cache
+# Home Assistant instance files (for testing)
+home-assistant.log*
+home-assistant_v2.db*
+.HA_VERSION
+.ha_run.lock
+.storage/
+.cloud/
+deps/
+tts/
 
-# python-language-server / Rope
-.ropeproject
+# Docker test environment
+config/
+!config/configuration.yaml
+!config/automations.yaml
+!config/scripts.yaml
+!config/scenes.yaml
+!config/secrets.yaml
+config.backup/

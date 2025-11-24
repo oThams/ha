@@ -221,6 +221,42 @@ Chaque entité climate expose les attributs suivants :
 | `heating_power_request` | Puissance de chauffe demandée (0-100%) |
 | `selected_schedule` | Nom de la programmation active |
 
+## 🧪 Test et Développement
+
+### Test avec Docker
+
+Pour tester l'intégration dans un environnement Docker isolé :
+
+```bash
+# Méthode 1 : Script automatique
+./start-test.sh
+
+# Méthode 2 : Makefile (recommandé)
+make test        # Build et démarre
+make logs        # Voir les logs
+make restart     # Redémarrer
+make down        # Arrêter
+
+# Méthode 3 : Docker Compose
+docker-compose up -d
+```
+
+Accédez ensuite à http://localhost:8123
+
+📖 Consultez [TESTING.md](TESTING.md) pour le guide complet de test.
+
+### Structure du projet
+
+```
+.
+├── custom_components/intuis/    # Code de l'intégration
+├── config/                      # Configuration de test HA
+├── Dockerfile                   # Image Docker de test
+├── docker-compose.yml           # Configuration Docker Compose
+├── Makefile                     # Commandes make simplifiées
+└── start-test.sh               # Script de démarrage rapide
+```
+
 ## 🤝 Contribution
 
 Les contributions sont les bienvenues ! N'hésitez pas à :

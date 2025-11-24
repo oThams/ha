@@ -1,19 +1,38 @@
-# General files
-.git
-.github
-config
-docs
+# Git
+.git/
+.gitignore
+.gitattributes
 
-# Development
-.devcontainer
-.vscode
+# Documentation
+README.md
+TESTING.md
+info.md
+LICENSE
 
-# Test related files
-tests
+# HACS
+hacs.json
 
-# Other virtualization methods
-venv
-.vagrant
+# Config (will be mounted as volume)
+config/
 
-# Temporary files
-**/__pycache__
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.yml
+start-test.sh
