@@ -1,0 +1,22 @@
+services:
+  homeassistant:
+    build: .
+    container_name: homeassistant-intuis-test
+    restart: unless-stopped
+    privileged: true
+    # Use port mapping instead of host network (better compatibility with macOS)
+    ports:
+      - "8123:8123"
+    volumes:
+      # Mount custom component for live development
+      - ./custom_components/intuis:/config/custom_components/intuis:ro
+      # Mount config directory for persistence
+      - ./config:/config
+    environment:
+      - TZ=Europe/Paris
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8123/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
